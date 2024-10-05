@@ -222,9 +222,7 @@
   
 }
 
-#servicio{
-  
-}
+#servicio{}
 .servicio-contendor-cuadro{
     border-radius: 8px;
     padding-bottom: 2rem;
@@ -351,7 +349,389 @@ color: #EBEBEB;
         }
 
 
+        .cuerpo7{
+            
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            margin-top: 6rem;
+        }
+
+
+.cuerpo7-contenedor{
+    padding-top: 2rem;
+    background-color: rgb(255, 253, 253);
+    text-align: center;
+    justify-content: center;
+}
+
+
+.cuerpo7-contenedor-titulo{
+color:#333333 ;
+font-family: "Baloo Da", Sans-serif;
+font-size: 2rem;
+font-weight: 700;
+}
+
+
+.cuerpo7-contenedor-galeria-titulo{
+    margin-top: 3rem;
+    color:#333333 ;
+    font-family: "Baloo Da", Sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    }
+    
+
+/* Estilo general para la galería */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px; /* Espacio entre las imágenes */
+    padding: 10px;
+}
+
+/* Estilo para las imágenes */
+.gallery a img {
+    width: 100%; /* La imagen ocupará el 100% del contenedor */
+    max-width: 200px; /* Máximo ancho para las imágenes */
+    height: auto; /* Mantiene la proporción de la imagen */
+    object-fit: cover; /* Asegura que la imagen se ajuste al tamaño del contenedor sin deformarse */
+    border-radius: 8px; /* Bordes redondeados opcionales */
+    transition: transform 0.3s ease; /* Animación suave para zoom al hacer hover */
+}
+
+/* Efecto al hacer hover sobre las imágenes */
+.gallery a img:hover {
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño al hacer hover */
+}
+
+/* Ajustes para pantallas pequeñas (Responsive) */
 @media (max-width: 768px) {
+    .gallery a img {
+        max-width: 150px; /* Reduce el tamaño máximo en pantallas más pequeñas */
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery a img {
+        max-width: 100px; /* Aún más pequeño en pantallas muy pequeñas */
+    }
+}
+
+
+
+
+.container-antes {
+    max-width: 400px;
+  }
+  
+  #comparison {
+      width: 100%;
+      padding-bottom: 100%;
+      overflow: hidden; 
+    position: relative;
+  }
+  
+  figure { 
+    position: absolute;
+    background-image: url('images/baño-antes.png');
+    background-size: cover;
+      font-size: 0;
+      width: 100%;
+      height: 100%;
+      margin: 0; 
+  }
+  
+  #divisor { 
+    background-image: url('images/baño-despues.png');
+    background-size: cover;
+      position: absolute;
+      width: 50%; 
+      box-shadow: 0 5px 10px -2px rgba(0,0,0,0.3);
+      bottom: 0; height: 100%;
+  }
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      right: -2px;
+      width: 4px;
+      height: calc(50% - 25px);
+      background: white;
+      z-index: 3;
+    }
+    &::before {
+      top: 0;
+      box-shadow: 0 -3px 8px 1px rgba(0,0,0,.3);
+    }
+    &::after {
+      bottom: 0;
+      box-shadow: 0 3px 8px 1px rgba(0,0,0,.3);
+    }
+  
+  #handle {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    z-index: 1;
+    
+    &::before,
+    &::after {
+      content: '';
+      width: 0;
+      height: 0;
+      border: 6px inset transparent;
+      position: absolute;
+      top: 50%;
+      margin-top: -6px;
+    }
+    &::before {
+      border-right: 6px solid white;
+      left: 50%;
+      margin-left: -17px;
+    }
+    &::after {
+      border-left: 6px solid white;
+      right: 50%;
+      margin-right: -17px;
+    }
+  }
+  
+  input[type=range]{
+      -webkit-appearance:none;
+      -moz-appearance:none;
+      position: absolute;
+      top: 50%; left: -25px;
+    transform: translateY(-50%);
+      background-color: transparent;
+      width: calc(100% + 50px); 
+    z-index: 2;
+    
+    &:focus,
+    &:active {
+      border: none;
+      outline: none;
+    }
+  }
+  input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: none;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background: transparent;
+    border: 4px solid white;
+    box-shadow: 0 0 8px 1px rgba(0,0,0,.3);
+  }
+  input[type=range]::-moz-range-track {
+      -moz-appearance:none;
+      height:15px;
+      width: 100%;
+      background-color: transparent; 
+      position: relative;
+      outline: none;    
+  }
+
+
+
+
+#span-reforma{
+    color: #cadc03;
+}
+
+
+#span-galeria{
+    color: #cadc03;
+}
+  .container-antes1 {
+
+    max-width: 400px;
+}
+
+#comparison1 {
+    width: 100%;
+    padding-bottom: 100%;
+    overflow: hidden; 
+    position: relative;
+}
+
+figure1{ 
+    position: absolute;
+    background-image: url('images/cocina-antes.png');
+    background-size: cover;
+    font-size: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0; 
+}
+
+#divisor1 { 
+    background-image: url('images/cocina-despues.png');
+    background-size: cover;
+    position: absolute;
+    width: 50%; 
+    box-shadow: 0 5px 10px -2px rgba(0,0,0,0.3);
+    bottom: 0; 
+    height: 100%;
+}
+
+#divisor1::before,
+#divisor1::after {
+    content: '';
+    position: absolute;
+    right: -2px;
+    width: 4px;
+    height: calc(50% - 25px);
+    background: white;
+    z-index: 3;
+}
+
+#divisor1::before {
+    top: 0;
+    box-shadow: 0 -3px 8px 1px rgba(0,0,0,.3);
+}
+
+#divisor1::after {
+    bottom: 0;
+    box-shadow: 0 3px 8px 1px rgba(0,0,0,.3);
+}
+
+#handle1 {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    z-index: 1;
+}
+
+#handle1::before,
+#handle1::after {
+    content: '';
+    width: 0;
+    height: 0;
+    border: 6px inset transparent;
+    position: absolute;
+    top: 50%;
+    margin-top: -6px;
+}
+
+#handle1::before {
+    border-right: 6px solid white;
+    left: 50%;
+    margin-left: -17px;
+}
+
+#handle1::after {
+    border-left: 6px solid white;
+    right: 50%;
+    margin-right: -17px;
+}
+
+input[type=range] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    position: absolute;
+    top: 50%; 
+    left: -25px;
+    transform: translateY(-50%);
+    background-color: transparent;
+    width: calc(100% + 50px); 
+    z-index: 2;
+}
+
+input[type=range]:focus,
+input[type=range]:active {
+    border: none;
+    outline: none;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: none;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background: transparent;
+    border: 4px solid white;
+    box-shadow: 0 0 8px 1px rgba(0,0,0,.3);
+}
+
+input[type=range]::-moz-range-track {
+    -moz-appearance: none;
+    height: 15px;
+    width: 100%;
+    background-color: transparent; 
+    position: relative;
+    outline: none;    
+}
+
+
+
+#cuerpo7-contenedor-antesdepues{
+    margin-top: 2rem;
+    justify-content: center;
+    text-align: center;
+}
+
+.cuerpo7-contenedor-antes{
+    text-align: start !important;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+
+
+.container-antes-titulo{
+    margin-top: 5px;
+font-family: "Poppins", Sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+
+}
+
+
+.container-antes-desc{
+
+    text-align: left;
+    color: #333333;
+    font-family: "Poppins", Sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+
+.container-antes-titulo1{
+    margin-top: 5px;
+font-family: "Poppins", Sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+
+}
+
+
+.container-antes-desc1{
+
+    text-align: left;
+    color: #333333;
+    font-family: "Poppins", Sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+@media (max-width: 768px) {
+
+    .container-antes1 {
+        margin-top: 3rem;
+        max-width: 400px;
+    }
+
     #cuerpo3{
         padding-left: 1rem;
         background-size: 200% 100%;
